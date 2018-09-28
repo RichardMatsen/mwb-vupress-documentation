@@ -1,0 +1,132 @@
+/* <style type="text/css"> */
+.Tooltip__container {
+  font: normal 10px Verdana;
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #aaa;
+  opacity: .7;
+  white-space: nowrap;
+  visibility: visible;
+  transition: opacity .2s ease, visibility .2s ease
+}
+
+.Tooltip__hidden {
+  opacity: 0;
+  visibility: hidden
+}
+/* </style> */
+/* <style type="text/css"> */
+.Switcher__container {
+  font: normal 10px Verdana;
+  white-space: nowrap
+}
+
+.Switcher__label {
+  font-weight: 700;
+  font-size: 11px;
+  margin-bottom: 7px
+}
+
+.Switcher__item {
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px 7px;
+  cursor: pointer;
+  transition: background .3s ease
+}
+
+.Switcher__item:hover {
+  background: rgba(255, 165, 0, .15)
+}
+
+.Switcher__item.Switcher__active {
+  cursor: default;
+  background: orange
+}
+
+.Switcher__item+.Switcher__item {
+  margin-left: 5px
+}
+/* </style> */
+/* <style type="text/css"> */
+.Sidebar__container {
+  background: #fff;
+  border: none;
+  border-right: 1px solid #aaa;
+  bottom: 0;
+  opacity: .95;
+  overflow-y: auto;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  transition: transform .2s ease;
+  z-index: 1
+}
+
+.Sidebar__container.Sidebar__left {
+  left: 0
+}
+
+.Sidebar__container.Sidebar__left.Sidebar__hidden {
+  transform: translateX(calc(-100% + 7px))
+}
+/* </style> */
+/* <style type="text/css"> */
+.CheckboxList__container {
+  font: normal 10px Verdana;
+  white-space: nowrap
+}
+
+.CheckboxList__label {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 7px
+}
+
+.CheckboxList__checkbox {
+  cursor: pointer
+}
+
+.CheckboxList__item {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 3px
+}
+
+.CheckboxList__itemText {
+  margin-left: 3px;
+  position: relative;
+  top: -2px;
+  vertical-align: middle
+}
+/* </style> */
+/* <style type="text/css"> */
+.ModulesTreemap__container,
+.ModulesTreemap__map {
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+
+.ModulesTreemap__sidebarGroup {
+  margin-bottom: 20px
+}
+
+.ModulesTreemap__activeSize {
+  font-weight: 700
+}
+/* </style> */
+/* <style type="text/css"> */
+#app,
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden
+}
+/* </style> */

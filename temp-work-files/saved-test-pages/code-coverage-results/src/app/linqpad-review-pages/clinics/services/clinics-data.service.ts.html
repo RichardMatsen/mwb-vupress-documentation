@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/linqpad-review-pages/clinics/services/clinics-data.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/linqpad-review-pages/clinics/services</a> clinics-data.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>52/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>14/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>46/46</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { NgRedux, select } from '@angular-redux/store';
+&nbsp;
+import { IFileInfo } from '../../../model/fileInfo.model';
+import { IAppState } from '../../../store/state/AppState';
+import { IMeasureUpdate } from '../../../model/measure.model';
+import { DataService } from '../../../services/data-service/data.service';
+import { NameParsingService } from '../../../services/data-service/name-parsing.service';
+import { ListFormatterService } from '../../../services/list-formatter.service/list-formatter.service';
+import { FileService } from '../../../services/file-service/file.service';
+import { ClinicsFormatService } from './clinics-format.service';
+import { ClinicsActions } from './clinics.actions';
+import { Logger } from '../../../common/mw.common.module';
+&nbsp;
+@Injectable()
+export class ClinicsDataService extends DataService {
+&nbsp;
+  @select(['pages', 'clinics', 'files']) files$: Observable&lt;IFileInfo[]&gt;;
+  @select(['pages', 'clinics', 'fileInfo']) fileInfo$: Observable&lt;IFileInfo&gt;;
+  @select(['config', 'clinicsConfig']) config$: Observable&lt;any&gt;;
+&nbsp;
+  protected PAGE = 'clinics';
+  protected baseUrl = '/data/';
+  protected filePrefixes;
+  private filesToInit;
+  private filesToDisplay;
+&nbsp;
+  constructor (
+    protected formatService: ClinicsFormatService,
+    protected nameParsingService: NameParsingService,
+    protected listFormatterService: ListFormatterService,
+    protected fileService: FileService,
+    protected logger: Logger,
+    protected actions: ClinicsActions,
+    private ngRedux: NgRedux&lt;IAppState&gt;,
+  ) {
+    super(formatService, nameParsingService, listFormatterService, fileService, logger, actions);
+  }
+&nbsp;
+  public initializeList() {
+    this.getConfig$().subscribe(_ =&gt;
+      this.getBaseDataUrl$().subscribe(__ =&gt;
+        super.initializeList(this.filesToInit, this.filesToDisplay)
+      )
+    );
+  }
+&nbsp;
+  private getConfig$(): Observable&lt;any&gt; {
+    return this.config$
+      .waitFor$()
+      .do(config =&gt; {
+        this.filePrefixes = config.filePrefixes;
+        this.filesToInit = config.numDataPointsForSparkline;
+        this.filesToDisplay = config.numInitialFilesToDisplay;
+      });
+  }
+&nbsp;
+  public getMeasure(): Observable&lt;IMeasureUpdate&gt; {
+    return this.files$
+      .waitFor$(data =&gt; data.length)
+      .map(files =&gt; {
+        return { id: 'clinics', metric: files[0].metric, color: files[0].badgeColor, history: this.calcHistory(files) };
+      });
+  }
+&nbsp;
+  private calcHistory(files): number[] {
+    const data = files
+      .filter(f =&gt; !!f.metric)
+      .map(f =&gt; (+f.metric.replace('%', '')).toFixed(4));
+    const min = Math.min(...data);
+    const history = data
+      .map(d =&gt; +(d - min + 1).toFixed(4))
+      .reverse();
+    return history;
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:46:49 GMT+1200 (New Zealand Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\..\sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/services/file-service/file.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/services/file-service</a> file.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.21% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>55/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.04% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>50/51</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import '../../rxjs-extensions';
+import { Injectable } from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+import { NgRedux, select } from '@angular-redux/store';
+&nbsp;
+import { IAppState } from '../../store/state/AppState';
+import { Logger } from '../../common/mw.common.module';
+import { UiActions } from 'app/common/ui.actions/ui.actions';
+import { FileActions } from './file.actions';
+&nbsp;
+@Injectable()
+export class FileService {
+&nbsp;
+  @select(['file', 'fileList']) storeFileList$;
+&nbsp;
+  constructor (
+    public http: Http,
+    public router: Router,
+    public ngRedux: NgRedux&lt;IAppState&gt;,
+    public logger: Logger,
+    public fileActions: FileActions,
+    public uiActions: UiActions
+  ) {}
+&nbsp;
+  public getFileList(baseUrl: string): void {
+    this.storeFileList$.subscribe(fileList =&gt; {
+      if (fileList.files || fileList.pending) {
+        return;
+      }
+      const url = `${baseUrl}filelist.txt`;
+      this.fileActions.setFileListPending(true);
+      this.http.get(url)
+        .map((res: Response) =&gt; res.text().replace(/\r/, '').split(/\n/))
+        .map(files =&gt; files.filter(file =&gt; file))  // remove blank lines
+        .catch(error =&gt; this.handleFileListError(error))
+        .subscribe(files =&gt; this.fileActions.setFileListSuccess(files));
+    });
+  }
+&nbsp;
+  public getFile(url: string): Observable&lt;Response&gt; {
+    return this.http.get(url)
+      .catch(error =&gt; this.handleError(error, 'getFile'));
+  }
+&nbsp;
+  private handleFileListError(error: Response | any) {
+    this.fileActions.setFileListFailed(error);
+&nbsp;
+    const caller = `${this.constructor.name}.getFileList`;
+    const msg = `Caller: ${caller}, ${error}. Error status: ${error.status} }`;
+    error.caller = caller;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (error.status === 404) {
+      this.uiActions.setFour0FourMessage(caller, msg, error.url);
+      this.router.navigate(['/404'] );
+    }
+    return Observable.throw(error);
+  }
+&nbsp;
+  private handleError(error: Response | any, method: string) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (method === 'getFileList') {
+<span class="cstat-no" title="statement not covered" >      this.fileActions.setFileListFailed(error);</span>
+    }
+    const caller = `${this.constructor.name}.${method}`;
+    const msg = `Caller: ${caller}, ${error}. Error status: ${error.status} }`;
+    error.caller = caller;
+    if (error instanceof Response &amp;&amp; error.status === 404) {
+      this.ngRedux.dispatch( {
+        type: UiActions.FOUR0FOUR_MESSAGE,
+        four0four: { caller: caller,  url: error.url }
+      });
+      this.router.navigate(['/404'] );
+    }
+    return Observable.throw(error);
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:46:49 GMT+1200 (New Zealand Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

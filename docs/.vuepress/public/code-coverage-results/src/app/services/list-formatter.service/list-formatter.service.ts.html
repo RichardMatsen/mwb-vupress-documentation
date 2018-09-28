@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/services/list-formatter.service/list-formatter.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/services/list-formatter.service</a> list-formatter.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>44/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>34/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>41/41</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+&nbsp;
+import { IFileInfo } from '../../model/fileInfo.model';
+&nbsp;
+@Injectable()
+export class ListFormatterService {
+&nbsp;
+  public process(files$: Observable&lt;IFileInfo[]&gt;): Observable&lt;IFileInfo[]&gt; {
+    return files$
+      .map(files =&gt; files.sort(this.fileInfoComparer))
+      .map(files =&gt; this.applySequence(files));
+  }
+&nbsp;
+  fileInfoComparer(a: IFileInfo, b: IFileInfo): number {
+    if (!a.effectiveDate || !b.effectiveDate) {
+      throw new Error('Effective dates not valid. a: ' + a + ', b: ' + b);
+    }
+    return a.effectiveDate &gt; b.effectiveDate ? -1 :             // Latest date on top
+            a.effectiveDate &lt; b.effectiveDate ? 1 :
+              a.namePrefix &lt; b.namePrefix ? -1 :                // then sort by name prefix to keep similar files together
+                a.namePrefix &gt; b.namePrefix ? 1 :
+                  a.effectiveTime &gt; b.effectiveTime ? -1 :      // then the latest time (version)
+                    a.effectiveTime &lt; b.effectiveTime ? 1 : 0;
+  }
+&nbsp;
+  applySequence = (files: IFileInfo[]): IFileInfo[] =&gt; {
+    return files.reduce((acc, current) =&gt; {
+      const previous = acc[acc.length - 1];
+      const sequenced = this.sequencer(previous, current);
+      return [...acc, sequenced];
+    }, []);
+  }
+&nbsp;
+  sequencer = (previous: IFileInfo, current: IFileInfo): IFileInfo =&gt; {
+    current.sequenceNo = this.getSequenceNo(previous, current);
+    this.setDisplayName(current);
+    return current;
+  }
+&nbsp;
+  getSequenceNo = (previous: IFileInfo, current: IFileInfo): number =&gt; {
+    if (!previous || !current || !current.effectiveTime) {
+      return 0;
+    }
+    if (!this.hasSameFileNameAndDate(previous, current)) {
+      return 0;
+    }
+    return previous.sequenceNo + 1;
+  }
+&nbsp;
+  hasSameFileNameAndDate(previous: IFileInfo, current: IFileInfo): boolean {
+    return previous.baseName === current.baseName &amp;&amp;
+      previous.effectiveDate.getTime() === current.effectiveDate.getTime();
+  }
+&nbsp;
+  setDisplayName = (fileInfo: IFileInfo) =&gt; {
+    fileInfo.displayName = fileInfo.name;
+&nbsp;
+    if (!fileInfo.effectiveTime || fileInfo.sequenceNo === undefined || fileInfo.sequenceNo &lt; 0) {
+      return;
+    }
+&nbsp;
+    if (fileInfo.sequenceNo === 0) {
+      this.removeTimeFromDisplayName(fileInfo);
+    } else {
+      fileInfo.displayName = '...';
+    }
+  }
+&nbsp;
+  removeTimeFromDisplayName = (fileInfo) =&gt; {
+    const timeAsInFileName = fileInfo.effectiveTime.replace(':', '.');
+    const timePos = fileInfo.name.indexOf(timeAsInFileName);
+    if (timePos !== -1) {
+      fileInfo.displayName = fileInfo.name.replace(` - ${timeAsInFileName}`, '').trimWithMask( '- ' );
+    }
+  }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:46:49 GMT+1200 (New Zealand Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>

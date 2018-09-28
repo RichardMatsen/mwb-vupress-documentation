@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/app/services/data-service/data.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\..\index.html">All files</a> / <a href="index.html">src/app/services/data-service</a> data.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>98/98</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>31/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>85/85</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import '../../rxjs-extensions';
+&nbsp;
+import { Injectable } from '@angular/core';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { forkJoin } from 'rxjs/observable/forkJoin';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { NgRedux, select } from '@angular-redux/store';
+&nbsp;
+import { IAppState } from '../../store/state/AppState';
+import { IFileInfo } from '../../model/fileInfo.model';
+import { FormatService } from './format.service';
+import { NameParsingService } from './name-parsing.service';
+import { ListFormatterService } from '../list-formatter.service/list-formatter.service';
+import { FileService } from '../file-service/file.service';
+import { MigrationWorkBenchCommonModule, ToastrService, Logger, maskedTrim } from '../../common/mw.common.module';
+import { IMeasureUpdate } from '../../model/measure.model';
+import { PageActions } from '../../linqpad-review-pages/common/page.actions';
+&nbsp;
+@Injectable()
+export abstract class DataService {
+&nbsp;
+  @select(['config', 'baseDataUrl']) baseDataUrl$: Observable&lt;string&gt;;
+  @select(['file', 'fileList', 'files']) fileNames$: Observable&lt;string[]&gt;;
+  public abstract config$: Observable&lt;any&gt;;
+  public abstract files$: Observable&lt;IFileInfo[]&gt;;
+&nbsp;
+  protected abstract PAGE;
+  protected baseUrl;
+  protected filePrefixes;
+&nbsp;
+  constructor (
+    protected formatService: FormatService,
+    protected nameParsingService: NameParsingService,
+    protected listFormatterService: ListFormatterService,
+    protected fileService: FileService,
+    protected logger: Logger,
+    protected pageActions: PageActions,
+  ) {}
+&nbsp;
+  public abstract getMeasure(): Observable&lt;IMeasureUpdate&gt;;
+&nbsp;
+  protected getBaseDataUrl$() {
+    return this.baseDataUrl$
+      .waitFor$()
+      .do(baseUrl =&gt; {
+        this.baseUrl = baseUrl;
+      });
+  }
+&nbsp;
+  public initializeList(numToInitialize, numToDisplay) {
+    this.pageActions.initializeListRequest();
+    this.fileService.getFileList(this.baseUrl);
+    const parsed$ = this.parsed$(this.filesOfType$);
+    const ordered$ = this.listFormatterService.process(parsed$);
+    const withContent$ = this.withContent$(ordered$, numToInitialize);
+    withContent$.subscribe(
+      (files) =&gt; { this.pageActions.initializeListSuccess(files, numToDisplay); },
+      (error) =&gt; { this.pageActions.initializeListFailed(error); }
+    );
+  }
+&nbsp;
+  get filesOfType$(): Observable&lt;string[]&gt; {
+    return this.fileNames$
+      .waitFor$()  // ensures can move between Observable&lt;fileInfo&gt; and Observable&lt;fileIno[]&gt; with .toArray()
+      .map(files =&gt; files.filter(file =&gt; this.filePrefixes.some(value =&gt; file.startsWith(value))));
+  }
+&nbsp;
+  protected parsed$(files$: Observable&lt;string[]&gt;): Observable&lt;IFileInfo[]&gt; {
+    return files$.map(files =&gt;
+      this.nameParsingService.parseFiles(files, this.filePrefixes)
+    );
+  }
+&nbsp;
+  public updateList(numToDisplay: number) {
+    this.pageActions.updateListRequest();
+    const files$ = this.files$.take(1);  // read once - otherwise, endlessly loops due to self update
+    this.withContent$(files$, numToDisplay)
+      .subscribe(
+        (files) =&gt; { this.pageActions.updateListSuccess(files, numToDisplay); },
+        (error) =&gt; { this.pageActions.updateListFailed(error); }
+      );
+  }
+&nbsp;
+  private withContent$(files$: Observable&lt;IFileInfo[]&gt;, numToInitialize: number): Observable&lt;IFileInfo[]&gt; {
+    return files$.concatMap(files =&gt; {
+      const withContent$ = files.map((file, index) =&gt; {
+        return file.content || index &gt;= numToInitialize
+          ? Observable.of(file)
+          : this.getContent(file);
+      });
+      return forkJoin(...withContent$);
+    })
+    .catch(error =&gt; this.handleError(error, 'withContent$'));
+  }
+&nbsp;
+  public getContent(fileInfo: IFileInfo): Observable&lt;IFileInfo&gt; {
+    const url = this.baseUrl + fileInfo.name + '.html';
+    return this.fileService.getFile(url)
+      .map((res: Response) =&gt; {
+        const newFileInfo = {...fileInfo};
+        const date = res.headers.get('date');
+        newFileInfo.lastModified = date ? <span class="branch-0 cbranch-no" title="branch not covered" >new Date(date) </span>: null;
+        const content = res.text() || <span class="branch-1 cbranch-no" title="branch not covered" >'';</span>
+        return this.formatService.processContent(content, newFileInfo);
+      })
+      .catch(error =&gt; this.handleError(error, 'getContent'));
+  }
+&nbsp;
+  protected filesByDate(files) {
+    const keyFn = (file) =&gt; this.formatDate(file.effectiveDate);
+    return this.groupBy(files, keyFn)
+      .map(group =&gt; ({date: group.key, files: group.group }));
+  }
+&nbsp;
+  private groupBy(arr, keyFn) {
+    const grouped = arr.reduce( (grouping, item) =&gt; {
+      const key = keyFn(item);
+      grouping[key] = grouping[key] || [];
+      grouping[key].push(item);
+      return grouping;
+    }, {} );
+    return Object.keys(grouped)
+      .map(key =&gt; ({key: key, group: grouped[key]}));
+  }
+&nbsp;
+  private formatDate(date) {
+    // tslint:disable:prefer-const
+    let d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+    month = month.length &lt; 2 ? '0' + month : <span class="branch-1 cbranch-no" title="branch not covered" >month;</span>
+    day = day.length &lt; 2 ? '0' + day : <span class="branch-1 cbranch-no" title="branch not covered" >day;</span>
+    return [year, month, day].join('-');
+  }
+&nbsp;
+  private handleError(error: any, method: string) {
+    const caller = `${this.constructor.name}.${method}`;
+    this.logger.error(caller + ': ' + error);
+    error.caller = caller;
+    return Observable.throw(error);
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:46:49 GMT+1200 (New Zealand Standard Time)
+</div>
+</div>
+<script src="..\..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\..\sorter.js"></script>
+</body>
+</html>
